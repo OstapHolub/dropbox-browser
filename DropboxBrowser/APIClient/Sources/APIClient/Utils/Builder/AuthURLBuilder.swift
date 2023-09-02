@@ -16,13 +16,14 @@ public struct AuthURLBuilder {
         self.url = url
     }
 
-    public func build(with query: [QueryItem]) throws -> URL {
+    public func build(with query: [AuthQueryItem]) throws -> URL {
 
         guard !query.isEmpty else {
             throw URLBuilderError.emptyParams
         }
 
-        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+        guard var components = URLComponents(url: url.appendingPathComponent("authorize"),
+                                             resolvingAgainstBaseURL: false) else {
             throw URLBuilderError.invalidBaseURL
         }
 

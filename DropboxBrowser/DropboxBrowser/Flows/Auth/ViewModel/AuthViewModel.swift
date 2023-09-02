@@ -16,6 +16,6 @@ final class AuthViewModel: NSObject {
     }
 
     func authenticate() {
-        authService.authenticate()
+        try? authService.authenticate()
     }
 }

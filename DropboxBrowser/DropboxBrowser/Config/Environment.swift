@@ -9,6 +9,8 @@ import Foundation
 
 enum Environment {
 
+    // General
+
     static let baseAPIURL: URL = {
         guard var urlString = Environment.infoDictionary[Key.baseAPIURL] as? String else {
             fatalError("\(Key.baseAPIURL) key not set in plist for this environment")
@@ -20,6 +22,15 @@ enum Environment {
         }
         return url
     }()
+
+    static let clientId: String = {
+        guard let value = Environment.infoDictionary[Key.clientId] as? String else {
+            fatalError("\(Key.clientId) key not set in plist for this environment")
+        }
+        return value
+    }()
+
+    // Authentication
 
     static let baseAuthURL: URL = {
         guard var urlString = Environment.infoDictionary[Key.baseAuthURL] as? String else {
@@ -33,9 +44,35 @@ enum Environment {
         return url
     }()
 
-    static let clientId: String = {
-        guard let value = Environment.infoDictionary[Key.clientId] as? String else {
-            fatalError("\(Key.clientId) key not set in plist for this environment")
+    static let redirectURIScheme: String = {
+        guard let value = Environment.infoDictionary[Key.authRedirectURIScheme] as? String else {
+            fatalError("\(Key.authRedirectURIScheme) key not set in plist for this environment")
+        }
+        return value
+    }()
+
+    static let authResponseType: String = {
+        guard let value = Environment.infoDictionary[Key.authResponseType] as? String else {
+            fatalError("\(Key.authResponseType) key not set in plist for this environment")
+        }
+        return value
+    }()
+
+    static let authRedirectURI: URL = {
+        guard var urlString = Environment.infoDictionary[Key.authRedirectURI] as? String else {
+            fatalError("\(Key.authRedirectURI) key not set in plist for this environment")
+        }
+        urlString = urlString.replacingOccurrences(of: "\\", with: "")
+
+        guard let url = URL(string: urlString) else {
+            fatalError("\(Key.authRedirectURI) value is not a valid URL")
+        }
+        return url
+    }()
+
+    static let codeChallengeMethod: String = {
+        guard let value = Environment.infoDictionary[Key.codeChallengeMethod] as? String else {
+            fatalError("\(Key.codeChallengeMethod) key not set in plist for this environment")
         }
         return value
     }()
@@ -56,6 +93,10 @@ private extension Environment {
 
     enum Key {
         static let baseAPIURL = "BASE_API_URL"
+        static let authRedirectURIScheme = "AUTH_REDIRECT_URI_SCHEME"
+        static let authRedirectURI = "AUTH_REDIRECT_URI"
+        static let authResponseType = "AUTH_RESPONSE_TYPE"
+        static let codeChallengeMethod = "AUTH_CODE_CHALLENGE_METHOD"
         static let baseAuthURL = "AUTH_BASE_URL"
         static let clientId = "CLIENT_ID"
     }
