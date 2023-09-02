@@ -18,8 +18,16 @@ public final class URLRequestBuilder: RequestBuilder {
 
     // MARK: - Interface
     public func makeRequest<T>(_ apiRequest: T, baseURL: URL) throws -> URLRequest where T: APIRequest {
-        guard let resourceURL = URL(string: apiRequest.resourceName, relativeTo: baseURL) else {
-            throw NetworkingError.invalidResource
+
+        var resourceURL: URL
+
+        if #available(iOS 16, *) {
+            resourceURL = baseURL.appending(path: apiRequest.resourceName)
+        } else {
+            guard let url = URL(string: apiRequest.resourceName, relativeTo: baseURL) else {
+                throw NetworkingError.invalidResource
+            }
+            resourceURL = url
         }
 
         let encoder: ParametersEncoder = ParametersEncodingFactory.makeEncoder(for: apiRequest)
