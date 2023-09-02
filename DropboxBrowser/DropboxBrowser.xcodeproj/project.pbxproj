@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		116EC83E2AA3941B0055C2B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 116EC8402AA3941B0055C2B8 /* Localizable.strings */; };
+		116EC8432AA396660055C2B8 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EC8412AA396660055C2B8 /* Assets.generated.swift */; };
+		116EC8442AA396660055C2B8 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EC8422AA396660055C2B8 /* Strings.generated.swift */; };
 		11F150902AA37EFC00E6E5CA /* DropboxBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1508F2AA37EFC00E6E5CA /* DropboxBrowserApp.swift */; };
 		11F150922AA37EFC00E6E5CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150912AA37EFC00E6E5CA /* ContentView.swift */; };
 		11F150942AA37EFD00E6E5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F150932AA37EFD00E6E5CA /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		116EC83A2AA393860055C2B8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		116EC83B2AA393A70055C2B8 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		116EC83F2AA3941B0055C2B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		116EC8412AA396660055C2B8 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
+		116EC8422AA396660055C2B8 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
 		11F1508C2AA37EFC00E6E5CA /* DropboxBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1508F2AA37EFC00E6E5CA /* DropboxBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxBrowserApp.swift; sourceTree = "<group>"; };
 		11F150912AA37EFC00E6E5CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 		11F150BB2AA37F4200E6E5CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				116EC8412AA396660055C2B8 /* Assets.generated.swift */,
+				116EC8422AA396660055C2B8 /* Strings.generated.swift */,
 				11F150932AA37EFD00E6E5CA /* Assets.xcassets */,
 				116EC8402AA3941B0055C2B8 /* Localizable.strings */,
 			);
@@ -374,6 +380,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F150922AA37EFC00E6E5CA /* ContentView.swift in Sources */,
+				116EC8432AA396660055C2B8 /* Assets.generated.swift in Sources */,
+				116EC8442AA396660055C2B8 /* Strings.generated.swift in Sources */,
 				11F150C32AA3897800E6E5CA /* Environment.swift in Sources */,
 				11F150902AA37EFC00E6E5CA /* DropboxBrowserApp.swift in Sources */,
 			);
