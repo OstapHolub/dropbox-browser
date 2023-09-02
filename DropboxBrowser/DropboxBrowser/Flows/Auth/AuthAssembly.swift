@@ -20,7 +20,8 @@ enum AuthAssembly {
                                          uploadBuilder: uploadBuilder,
                                          baseURL: Environment.baseAuthURL)
 
-        let authService = AuthService(apiClient: apiClient)
+        let urlBuilder = AuthURLBuilder(url: Environment.baseAuthURL)
+        let authService = AuthService(apiClient: apiClient, urlBuilder: urlBuilder)
         let viewModel = AuthViewModel(authService: authService)
         return AnyView(AuthView(viewModel: viewModel))
     }

@@ -12,14 +12,16 @@ import AuthenticationServices
 final class AuthService: NSObject, AuthServiceProtocol {
 
     private let apiClient: APIClient
+    private let urlBuilder: AuthURLBuilder
 
-    init(apiClient: APIClient) {
+    init(apiClient: APIClient, urlBuilder: AuthURLBuilder) {
         self.apiClient = apiClient
+        self.urlBuilder = urlBuilder
         super.init()
     }
 
     func authenticate() {
-        
+
     }
 
     func exchange(code: String) {

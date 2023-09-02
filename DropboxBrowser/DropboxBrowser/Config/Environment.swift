@@ -56,7 +56,7 @@ private extension Environment {
 
     enum Key {
         static let baseAPIURL = "BASE_API_URL"
-        static let baseAuthURL = "BASE_AUTH_URL"
+        static let baseAuthURL = "AUTH_BASE_URL"
         static let clientId = "CLIENT_ID"
     }
 }
