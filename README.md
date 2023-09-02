@@ -1,14 +1,18 @@
 # dropbox-browser
-Media files browser from a shared folder
+Media files browser from a shared folder.
 
-## Installation
+## 🧐 Why?
+
+Test project for interview. Quick and simple.
+
+## ❗️ Before you begin
 
 ### Install SwiftGen
 In order to compile project install:
 - [SwiftGen](https://github.com/SwiftGen/SwiftGen#installation)
 - [SwiftLint](https://github.com/realm/SwiftLint#using-homebrew)
 
-## Project Structure
+## 🛠 Project Structure
 
 ### Config
 Root folder for xcconfig files for release and debug configurations of the app. Each developer should have thier own config files called `config.debub` and `config.release` for Debub and Release configurations respectively. Structure is the same for both and looks like this:
@@ -35,5 +39,12 @@ Shared space for small type extensions providing convenient operations for commo
 Space for shared across multiple flows views. It's okay to move something from flow to this space whenever you need to use it for something else. Make sure that does not break anything before making such change.
 
 ### SupportingFiles
-Auxiliary group to keep root directory clean. Contains info.plist
+Auxiliary group to keep root directory clean. Contains info.plist.
 
+## ✍️ Contributing
+
+Interested in contributing to this demo project? Thanks so much for your interest! We are always looking for improvements to the project and contributions from open-source developers are greatly appreciated.
+
+## ⚠️ License
+
+Dropbox Browser are licensed under [MIT LICENSE](LICENSE). 
