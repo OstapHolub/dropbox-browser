@@ -2,9 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DROPBOX_BASE_URL</key>
-	<string>${DROPBOX_BASE_URL}</string>
-	<key>DROPBOX_CLIENT_ID</key>
-	<string>${DROPBOX_CLIENT_ID}</string>
+	<key>BASE_API_URL</key>
+	<string>${BASE_API_URL}</string>
+	<key>BASE_AUTH_URL</key>
+	<string>${BASE_AUTH_URL}</string>
+	<key>CLIENT_ID</key>
+	<string>${CLIENT_ID}</string>
 </dict>
 </plist>

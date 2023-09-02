@@ -9,8 +9,9 @@ Media files browser from a shared folder
 Root folder for xcconfig files for release and debug configurations of the app. Each developer should have thier own config files called `config.debub` and `config.release` for Debub and Release configurations respectively. Structure is the same for both and looks like this:
 
 ```
-DROPBOX_CLIENT_ID = REPLACE WITH YOUR CLIENT ID
-DROPBOX_BASE_URL = REPLACE WITH YOUR BASE URL
+CLIENT_ID = REPLACE WITH YOUR CLIENT ID
+BASE_API_URL = REPLACE WITH YOUR BASE API URL
+BASE_AUTH_URL = REPLAVE WITH YOUR BASE AUTH URL
 ```
 
 ### Flows

@@ -9,14 +9,26 @@ import Foundation
 
 enum Environment {
 
-    static let baseURL: URL = {
-        guard var urlString = Environment.infoDictionary[Key.baseURL] as? String else {
-            fatalError("\(Key.baseURL) key not set in plist for this environment")
+    static let baseAPIURL: URL = {
+        guard var urlString = Environment.infoDictionary[Key.baseAPIURL] as? String else {
+            fatalError("\(Key.baseAPIURL) key not set in plist for this environment")
         }
         urlString = urlString.replacingOccurrences(of: "\\", with: "")
 
         guard let url = URL(string: urlString) else {
-            fatalError("\(Key.baseURL) value is not a valid URL")
+            fatalError("\(Key.baseAPIURL) value is not a valid URL")
+        }
+        return url
+    }()
+
+    static let baseAuthURL: URL = {
+        guard var urlString = Environment.infoDictionary[Key.baseAuthURL] as? String else {
+            fatalError("\(Key.baseAuthURL) key not set in plist for this environment")
+        }
+        urlString = urlString.replacingOccurrences(of: "\\", with: "")
+
+        guard let url = URL(string: urlString) else {
+            fatalError("\(Key.baseAuthURL) value is not a valid URL")
         }
         return url
     }()
@@ -43,7 +55,8 @@ private extension Environment {
 private extension Environment {
 
     enum Key {
-        static let baseURL = "DROPBOX_BASE_URL"
-        static let clientId = "DROPBOX_CLIENT_ID"
+        static let baseAPIURL = "BASE_API_URL"
+        static let baseAuthURL = "BASE_AUTH_URL"
+        static let clientId = "CLIENT_ID"
     }
 }

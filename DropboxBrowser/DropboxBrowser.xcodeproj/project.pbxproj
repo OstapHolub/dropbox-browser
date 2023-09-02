@@ -106,7 +106,6 @@
 				11F150BB2AA37F4200E6E5CA /* Resources */,
 				11F150BC2AA37F4900E6E5CA /* Extensions */,
 				11F150BE2AA37F7300E6E5CA /* Views */,
-				11F150932AA37EFD00E6E5CA /* Assets.xcassets */,
 				11F150C52AA389E300E6E5CA /* SupportingFiles */,
 				11F150952AA37EFD00E6E5CA /* Preview Content */,
 			);
@@ -155,6 +154,7 @@
 		11F150BB2AA37F4200E6E5CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11F150932AA37EFD00E6E5CA /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
