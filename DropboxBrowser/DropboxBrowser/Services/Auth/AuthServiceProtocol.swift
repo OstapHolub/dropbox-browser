@@ -10,6 +10,6 @@ import Foundation
 protocol AuthServiceProtocol {
 
     func authenticate() throws
-    func exchange(code: String, state: String)
+    func exchange(code: String, state: String) throws
     func refresh(token: String)
 }

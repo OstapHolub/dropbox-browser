@@ -69,8 +69,16 @@ final class AuthService: NSObject, AuthServiceProtocol {
             return
         }
 
-        print(code)
-        print(state)
+        let request = TokenExchangeRequest(code: code,
+                                           grantType: "authorization_code",
+                                           redirectURI: Environment.authRedirectURI.absoluteString,
+                                           clientId: Environment.clientId,
+                                           codeVerifier: codeVerifier)
+
+        Task {
+            let response = try await apiClient.send(request)
+            print(response)
+        }
     }
 
     func refresh(token: String) {
