@@ -88,3 +88,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+DropboxBrowser/DropboxBrowser/Config/config.debug.xcconfig
+DropboxBrowser/DropboxBrowser/Config/config.release.xcconfig
