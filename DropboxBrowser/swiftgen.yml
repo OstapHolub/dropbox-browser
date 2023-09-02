@@ -1,0 +1,14 @@
+xcassets:
+  - inputs:
+    - DropboxBrowser/Resources
+    outputs:
+      - templateName: swift5
+        output: DropboxBrowser/Resources/Assets.generated.swift
+
+strings:
+  inputs: DropboxBrowser/Resources/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: DropboxBrowser/Resources/Strings.generated.swift
+      params:
+        enumName: Strings

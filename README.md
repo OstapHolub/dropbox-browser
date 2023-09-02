@@ -3,6 +3,11 @@ Media files browser from a shared folder
 
 ## Installation
 
+### Install SwiftGen
+In order to compile project install:
+- [SwiftGen](https://github.com/SwiftGen/SwiftGen#installation)
+- [SwiftLint](https://github.com/realm/SwiftLint#using-homebrew)
+
 ## Project Structure
 
 ### Config
@@ -13,18 +18,6 @@ CLIENT_ID = REPLACE WITH YOUR CLIENT ID
 BASE_API_URL = REPLACE WITH YOUR BASE API URL
 BASE_AUTH_URL = REPLAVE WITH YOUR BASE AUTH URL
 ```
-
-Do not forget to add pods config include for `debug` and `release` config files. 
-
-Debug:
-```
-#include "Pods/Target Support Files/Pods-DropboxBrowser/Pods-DropboxBrowser.debug.xcconfig"
-```
-
-Release:
-```
-#include "Pods/Target Support Files/Pods-DropboxBrowser/Pods-DropboxBrowser.release.xcconfig"
-``` 
 
 ### Flows
 Folder contains files that are related to specific flow like auth, files browser, preview, file details, etc. Each individual flow contains root view, view model, specific to currecnt flow views, etc.
