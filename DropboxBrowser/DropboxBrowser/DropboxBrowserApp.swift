@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import APIClient
 
 @main
 struct DropboxBrowserApp: App {
+
     var body: some Scene {
         WindowGroup {
             AuthAssembly.makeModule()

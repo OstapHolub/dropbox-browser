@@ -7,10 +7,21 @@
 
 import Foundation
 import SwiftUI
+import APIClient
 
 enum AuthAssembly {
 
     static func makeModule() -> AnyView {
-        AnyView(Text("Auth module"))
+
+        let requestBuilder = URLRequestBuilder(authorizationProvider: AlwaysNoAuthorizationProvider())
+        let uploadBuilder = UploadRequestBuilder(authorizationProvider: AlwaysNoAuthorizationProvider())
+
+        let apiClient = URLSessionClient(requestBuilder: requestBuilder,
+                                         uploadBuilder: uploadBuilder,
+                                         baseURL: Environment.baseAuthURL)
+
+        let authService = AuthService(apiClient: apiClient)
+        let viewModel = AuthViewModel(authService: authService)
+        return AnyView(AuthView(viewModel: viewModel))
     }
 }

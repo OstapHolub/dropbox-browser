@@ -6,24 +6,16 @@
 //
 
 import Foundation
-import AuthenticationServices
 
 final class AuthViewModel: NSObject {
 
-    func authenticate() {
-        let session = ASWebAuthenticationSession(url: Environment.baseAuthURL, callbackURLScheme: "") { url, error in
-            print(url)
-            print(error)
-        }
-        session.presentationContextProvider = self
-        session.prefersEphemeralWebBrowserSession = true
-        session.start()
+    private let authService: AuthServiceProtocol
+
+    init(authService: AuthServiceProtocol) {
+        self.authService = authService
     }
-}
 
-extension AuthViewModel: ASWebAuthenticationPresentationContextProviding {
-
-    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        ASPresentationAnchor()
+    func authenticate() {
+        authService.authenticate()
     }
 }

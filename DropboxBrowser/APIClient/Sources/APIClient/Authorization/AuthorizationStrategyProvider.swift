@@ -12,9 +12,11 @@ public protocol AuthorizationStrategyProvider {
     func makeStrategy(_ type: Authorization) -> AuthorizationStrategy
 }
 
-final class AlwaysNoAuthorizationProvider: AuthorizationStrategyProvider {
+public final class AlwaysNoAuthorizationProvider: AuthorizationStrategyProvider {
 
-    func makeStrategy(_ type: Authorization) -> AuthorizationStrategy {
+    public init() {}
+
+    public func makeStrategy(_ type: Authorization) -> AuthorizationStrategy {
         NoAuthorizationStrategy()
     }
 }

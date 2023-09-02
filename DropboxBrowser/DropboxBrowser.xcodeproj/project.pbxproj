@@ -132,8 +132,8 @@
 		11D31D762AA3BE3E003C17F7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				11D31D772AA3BE56003C17F7 /* AuthService.swift */,
 				11D31D792AA3C06A003C17F7 /* AuthServiceProtocol.swift */,
+				11D31D772AA3BE56003C17F7 /* AuthService.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";

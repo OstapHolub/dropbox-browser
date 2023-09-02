@@ -7,17 +7,19 @@
 
 import Foundation
 import APIClient
+import AuthenticationServices
 
-final class AuthService: AuthServiceProtocol {
+final class AuthService: NSObject, AuthServiceProtocol {
 
     private let apiClient: APIClient
 
     init(apiClient: APIClient) {
         self.apiClient = apiClient
+        super.init()
     }
 
     func authenticate() {
-
+        
     }
 
     func exchange(code: String) {
@@ -26,5 +28,12 @@ final class AuthService: AuthServiceProtocol {
 
     func refresh(token: String) {
 
+    }
+}
+
+extension AuthService: ASWebAuthenticationPresentationContextProviding {
+
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        ASPresentationAnchor()
     }
 }
