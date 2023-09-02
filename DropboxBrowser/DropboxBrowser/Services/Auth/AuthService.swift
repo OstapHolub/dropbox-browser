@@ -40,9 +40,23 @@ final class AuthService: NSObject, AuthServiceProtocol {
             .codeChallengeMethod(Environment.codeChallengeMethod)
         ])
 
-        let session = ASWebAuthenticationSession(url: url, callbackURLScheme: Environment.redirectURIScheme, completionHandler: { url, error in
-            print(url)
-            print(error)
+        let session = ASWebAuthenticationSession(url: url, callbackURLScheme: Environment.redirectURIScheme, completionHandler: { [weak self] url, error in
+
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
+            guard let url = url else {
+                return
+            }
+
+            guard let state = url.state,
+                  let code = url.code else {
+                return
+            }
+
+            self?.exchange(code: code, state: state)
         })
 
         session.presentationContextProvider = self
@@ -50,8 +64,13 @@ final class AuthService: NSObject, AuthServiceProtocol {
         session.start()
     }
 
-    func exchange(code: String) {
+    func exchange(code: String, state: String) {
+        guard self.state == state else {
+            return
+        }
 
+        print(code)
+        print(state)
     }
 
     func refresh(token: String) {
