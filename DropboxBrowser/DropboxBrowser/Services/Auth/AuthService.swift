@@ -8,7 +8,7 @@
 import Foundation
 import APIClient
 
-final class AuthService {
+final class AuthService: AuthServiceProtocol {
 
     private let apiClient: APIClient
 
@@ -20,11 +20,11 @@ final class AuthService {
 
     }
 
-    func exchangeToken(code: String) {
+    func exchange(code: String) {
 
     }
 
-    func refreshToken(_ refreshToken: String) {
+    func refresh(token: String) {
 
     }
 }
