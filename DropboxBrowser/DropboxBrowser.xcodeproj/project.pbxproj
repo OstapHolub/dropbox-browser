@@ -14,6 +14,7 @@
 		11F150A12AA37EFD00E6E5CA /* DropboxBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150A02AA37EFD00E6E5CA /* DropboxBrowserTests.swift */; };
 		11F150AB2AA37EFD00E6E5CA /* DropboxBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150AA2AA37EFD00E6E5CA /* DropboxBrowserUITests.swift */; };
 		11F150AD2AA37EFD00E6E5CA /* DropboxBrowserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150AC2AA37EFD00E6E5CA /* DropboxBrowserUITestsLaunchTests.swift */; };
+		11F150C32AA3897800E6E5CA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150C22AA3897800E6E5CA /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		11F150AC2AA37EFD00E6E5CA /* DropboxBrowserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxBrowserUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		11F150C02AA3872C00E6E5CA /* config.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.debug.xcconfig; sourceTree = "<group>"; };
 		11F150C12AA3873800E6E5CA /* config.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = config.release.xcconfig; sourceTree = "<group>"; };
+		11F150C22AA3897800E6E5CA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		11F150C42AA389BE00E6E5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 				11F150BC2AA37F4900E6E5CA /* Extensions */,
 				11F150BE2AA37F7300E6E5CA /* Views */,
 				11F150932AA37EFD00E6E5CA /* Assets.xcassets */,
+				11F150C52AA389E300E6E5CA /* SupportingFiles */,
 				11F150952AA37EFD00E6E5CA /* Preview Content */,
 			);
 			path = DropboxBrowser;
@@ -173,10 +177,19 @@
 		11F150BF2AA37FA000E6E5CA /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				11F150C22AA3897800E6E5CA /* Environment.swift */,
 				11F150C02AA3872C00E6E5CA /* config.debug.xcconfig */,
 				11F150C12AA3873800E6E5CA /* config.release.xcconfig */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		11F150C52AA389E300E6E5CA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				11F150C42AA389BE00E6E5CA /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F150922AA37EFC00E6E5CA /* ContentView.swift in Sources */,
+				11F150C32AA3897800E6E5CA /* Environment.swift in Sources */,
 				11F150902AA37EFC00E6E5CA /* DropboxBrowserApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +487,7 @@
 				DEVELOPMENT_TEAM = 9Z3D289634;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DropboxBrowser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -504,6 +519,7 @@
 				DEVELOPMENT_TEAM = 9Z3D289634;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DropboxBrowser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -6,7 +6,12 @@ Media files browser from a shared folder
 ## Project Structure
 
 ### Config
-Root folder for xcconfig files for release and debug configurations of the app.
+Root folder for xcconfig files for release and debug configurations of the app. Each developer should have thier own config files called `config.debub` and `config.release` for Debub and Release configurations respectively. Structure is the same for both and looks like this:
+
+```
+DROPBOX_CLIENT_ID = REPLACE WITH YOUR CLIENT ID
+DROPBOX_BASE_URL = REPLACE WITH YOUR BASE URL
+```
 
 ### Flows
 Folder contains files that are related to specific flow like auth, files browser, preview, file details, etc. Each individual flow contains root view, view model, specific to currecnt flow views, etc.
@@ -22,3 +27,7 @@ Shared space for small type extensions providing convenient operations for commo
  
 ### Views
 Space for shared across multiple flows views. It's okay to move something from flow to this space whenever you need to use it for something else. Make sure that does not break anything before making such change.
+
+### SupportingFiles
+Auxiliary group to keep root directory clean. Contains info.plist
+
