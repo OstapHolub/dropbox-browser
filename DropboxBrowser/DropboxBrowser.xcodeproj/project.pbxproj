@@ -10,6 +10,7 @@
 		116EC83E2AA3941B0055C2B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 116EC8402AA3941B0055C2B8 /* Localizable.strings */; };
 		116EC8432AA396660055C2B8 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EC8412AA396660055C2B8 /* Assets.generated.swift */; };
 		116EC8442AA396660055C2B8 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EC8422AA396660055C2B8 /* Strings.generated.swift */; };
+		11C1B8952AA39A0400FC44CE /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 11C1B8942AA39A0400FC44CE /* APIClient */; };
 		11F150902AA37EFC00E6E5CA /* DropboxBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1508F2AA37EFC00E6E5CA /* DropboxBrowserApp.swift */; };
 		11F150922AA37EFC00E6E5CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150912AA37EFC00E6E5CA /* ContentView.swift */; };
 		11F150942AA37EFD00E6E5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F150932AA37EFD00E6E5CA /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C1B8952AA39A0400FC44CE /* APIClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11C1B8932AA39A0400FC44CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		11F150832AA37EFC00E6E5CA = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +100,7 @@
 				11F1509F2AA37EFD00E6E5CA /* DropboxBrowserTests */,
 				11F150A92AA37EFD00E6E5CA /* DropboxBrowserUITests */,
 				11F1508D2AA37EFC00E6E5CA /* Products */,
+				11C1B8932AA39A0400FC44CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +233,9 @@
 			dependencies = (
 			);
 			name = DropboxBrowser;
+			packageProductDependencies = (
+				11C1B8942AA39A0400FC44CE /* APIClient */,
+			);
 			productName = DropboxBrowser;
 			productReference = 11F1508C2AA37EFC00E6E5CA /* DropboxBrowser.app */;
 			productType = "com.apple.product-type.application";
@@ -729,6 +742,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11C1B8942AA39A0400FC44CE /* APIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = APIClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11F150842AA37EFC00E6E5CA /* Project object */;
 }
