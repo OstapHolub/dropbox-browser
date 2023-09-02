@@ -603,6 +603,7 @@
 		};
 		11F150B42AA37EFD00E6E5CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F150C02AA3872C00E6E5CA /* config.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -623,6 +624,7 @@
 		};
 		11F150B52AA37EFD00E6E5CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F150C12AA3873800E6E5CA /* config.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -643,6 +645,7 @@
 		};
 		11F150B72AA37EFD00E6E5CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F150C02AA3872C00E6E5CA /* config.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,6 +664,7 @@
 		};
 		11F150B82AA37EFD00E6E5CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F150C12AA3873800E6E5CA /* config.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
