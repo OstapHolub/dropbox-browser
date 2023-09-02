@@ -7,7 +7,6 @@ Test project for interview. Quick and simple.
 
 ## ❗️ Before you begin
 
-### Install SwiftGen
 In order to compile project install:
 - [SwiftGen](https://github.com/SwiftGen/SwiftGen#installation)
 - [SwiftLint](https://github.com/realm/SwiftLint#using-homebrew)
