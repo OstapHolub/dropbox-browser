@@ -13,7 +13,9 @@ struct AuthView: View {
 
     var body: some View {
         Button("Auth", action: {
-            viewModel.authenticate()
+            Task {
+                await viewModel.authenticate()
+            }
         })
     }
 }

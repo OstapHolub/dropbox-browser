@@ -15,7 +15,15 @@ final class AuthViewModel: NSObject {
         self.authService = authService
     }
 
-    func authenticate() {
-        try? authService.authenticate()
+    func authenticate() async {
+        do {
+            let authResult = try await authService.startAuthentication()
+            let credentials = try await authService.exchange(code: authResult.code,
+                                                             state: authResult.state)
+
+            //save credentials to store
+        } catch {
+
+        }
     }
 }

@@ -29,7 +29,7 @@ final class AuthService: NSObject, AuthServiceProtocol {
         super.init()
     }
 
-    func authenticate() throws {
+    func startAuthentication() async throws -> (state: String, code: String) {
         let url = try urlBuilder.build(with: [
             .clientId(Environment.clientId),
             .redirectURL(Environment.authRedirectURI.absoluteString),
@@ -41,33 +41,34 @@ final class AuthService: NSObject, AuthServiceProtocol {
             .tokenAccessType(Environment.tokenAccessType)
         ])
 
-        let session = ASWebAuthenticationSession(url: url, callbackURLScheme: Environment.redirectURIScheme, completionHandler: { [weak self] url, error in
+        return try await withCheckedThrowingContinuation { continuation in
+            let session = ASWebAuthenticationSession(url: url,
+                                                     callbackURLScheme: Environment.redirectURIScheme,
+                                                     completionHandler: { url, error in
 
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
+                if let error = error {
+                    continuation.resume(throwing: error)
+                }
 
-            guard let url = url else {
-                return
-            }
+                guard let state = url?.state,
+                      let code = url?.code else {
+                    continuation.resume(throwing: AuthError.unknown(""))
+                    return
+                }
 
-            guard let state = url.state,
-                  let code = url.code else {
-                return
-            }
-
-            self?.exchange(code: code, state: state)
-        })
-
-        session.presentationContextProvider = self
-        session.prefersEphemeralWebBrowserSession = true
-        session.start()
+                continuation.resume(returning: (state, code))
+            })
+            session.presentationContextProvider = self
+            session.prefersEphemeralWebBrowserSession = true
+            session.start()
+        }
     }
 
-    func exchange(code: String, state: String) {
+    func authenticate() async throws { }
+
+    func exchange(code: String, state: String) async throws -> Credentials {
         guard self.state == state else {
-            return
+            fatalError()
         }
 
         let request = TokenExchangeRequest(code: code,
@@ -76,14 +77,13 @@ final class AuthService: NSObject, AuthServiceProtocol {
                                            clientId: Environment.clientId,
                                            codeVerifier: codeVerifier)
 
-        Task {
-            let response = try await apiClient.send(request)
-            print(response)
-        }
+        return try await apiClient.send(request)
     }
 
-    func refresh(token: String) {
-
+    func refresh(token: String) async throws -> Credentials {
+        let request = RefreshTokenRequest(refreshToken: token,
+                                          clientId: Environment.clientId)
+        return try await apiClient.send(request)
     }
 }
 

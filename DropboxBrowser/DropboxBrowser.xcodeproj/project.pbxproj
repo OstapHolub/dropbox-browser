@@ -23,6 +23,8 @@
 		11D31D872AA3D345003C17F7 /* URL+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D862AA3D345003C17F7 /* URL+Code.swift */; };
 		11D31D8A2AA3D4DE003C17F7 /* TokenExchangeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D892AA3D4DE003C17F7 /* TokenExchangeRequest.swift */; };
 		11D31D8C2AA48ED5003C17F7 /* URL+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D8B2AA48ED5003C17F7 /* URL+State.swift */; };
+		11D31D902AA497A4003C17F7 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D8F2AA497A4003C17F7 /* Credentials.swift */; };
+		11D31D922AA49D56003C17F7 /* RefreshTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D912AA49D56003C17F7 /* RefreshTokenRequest.swift */; };
 		11F150902AA37EFC00E6E5CA /* DropboxBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1508F2AA37EFC00E6E5CA /* DropboxBrowserApp.swift */; };
 		11F150922AA37EFC00E6E5CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150912AA37EFC00E6E5CA /* ContentView.swift */; };
 		11F150942AA37EFD00E6E5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F150932AA37EFD00E6E5CA /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		11D31D862AA3D345003C17F7 /* URL+Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Code.swift"; sourceTree = "<group>"; };
 		11D31D892AA3D4DE003C17F7 /* TokenExchangeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenExchangeRequest.swift; sourceTree = "<group>"; };
 		11D31D8B2AA48ED5003C17F7 /* URL+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+State.swift"; sourceTree = "<group>"; };
+		11D31D8F2AA497A4003C17F7 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		11D31D912AA49D56003C17F7 /* RefreshTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenRequest.swift; sourceTree = "<group>"; };
 		11F1508C2AA37EFC00E6E5CA /* DropboxBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1508F2AA37EFC00E6E5CA /* DropboxBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxBrowserApp.swift; sourceTree = "<group>"; };
 		11F150912AA37EFC00E6E5CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				11D31D892AA3D4DE003C17F7 /* TokenExchangeRequest.swift */,
+				11D31D912AA49D56003C17F7 /* RefreshTokenRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -192,8 +197,17 @@
 		11D31D8D2AA48F5D003C17F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				11D31D8E2AA4979B003C17F7 /* Auth */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11D31D8E2AA4979B003C17F7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				11D31D8F2AA497A4003C17F7 /* Credentials.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		11F150832AA37EFC00E6E5CA = {
@@ -512,6 +526,8 @@
 				11D31D732AA3BB8B003C17F7 /* AuthViewModel.swift in Sources */,
 				11D31D6F2AA3A17F003C17F7 /* AuthAssembly.swift in Sources */,
 				11D31D8C2AA48ED5003C17F7 /* URL+State.swift in Sources */,
+				11D31D922AA49D56003C17F7 /* RefreshTokenRequest.swift in Sources */,
+				11D31D902AA497A4003C17F7 /* Credentials.swift in Sources */,
 				11D31D872AA3D345003C17F7 /* URL+Code.swift in Sources */,
 				11D31D812AA3D109003C17F7 /* String+SHA256.swift in Sources */,
 				11F150C32AA3897800E6E5CA /* Environment.swift in Sources */,

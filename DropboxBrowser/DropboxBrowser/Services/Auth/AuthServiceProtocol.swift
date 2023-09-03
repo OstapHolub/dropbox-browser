@@ -9,7 +9,7 @@ import Foundation
 
 protocol AuthServiceProtocol {
 
-    func authenticate() throws
-    func exchange(code: String, state: String) throws
-    func refresh(token: String)
+    func startAuthentication() async throws -> (state: String, code: String)
+    func exchange(code: String, state: String) async throws -> Credentials
+    func refresh(token: String) async throws -> Credentials
 }
