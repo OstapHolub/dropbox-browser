@@ -10,9 +10,11 @@ import Foundation
 final class AuthViewModel: NSObject {
 
     private let authService: AuthServiceProtocol
+    private let credentialsStore: CredentialsStoreProtocol
 
-    init(authService: AuthServiceProtocol) {
+    init(authService: AuthServiceProtocol, credentialsStore: CredentialsStoreProtocol) {
         self.authService = authService
+        self.credentialsStore = credentialsStore
     }
 
     func authenticate() async {
@@ -21,7 +23,7 @@ final class AuthViewModel: NSObject {
             let credentials = try await authService.exchange(code: authResult.code,
                                                              state: authResult.state)
 
-            //save credentials to store
+            credentialsStore.save(credentials)
         } catch {
 
         }

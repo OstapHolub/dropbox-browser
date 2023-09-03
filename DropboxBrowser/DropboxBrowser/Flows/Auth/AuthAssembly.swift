@@ -21,8 +21,12 @@ enum AuthAssembly {
                                          baseURL: Environment.baseAPIURL)
 
         let urlBuilder = AuthURLBuilder(url: Environment.baseAuthURL)
-        let authService = AuthService(apiClient: apiClient, urlBuilder: urlBuilder)
-        let viewModel = AuthViewModel(authService: authService)
+        let authService = AuthService(apiClient: apiClient,
+                                      urlBuilder: urlBuilder)
+        let credentialsStore = CredentialsStore(keychain: Keyсhain())
+
+        let viewModel = AuthViewModel(authService: authService,
+                                      credentialsStore: credentialsStore)
         return AnyView(AuthView(viewModel: viewModel))
     }
 }
