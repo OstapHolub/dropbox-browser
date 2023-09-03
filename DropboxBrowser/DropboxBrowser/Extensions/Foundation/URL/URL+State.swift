@@ -1,18 +1,17 @@
 //
-//  URL+Code.swift
+//  URL+State.swift
 //  DropboxBrowser
 //
-//  Created by Ostap Holub on 02.09.2023.
+//  Created by Ostap Holub on 03.09.2023.
 //
 
 import Foundation
 
 extension URL {
-
-    var code: String? {
+    var state: String? {
         guard let components = URLComponents(url: self, resolvingAgainstBaseURL: false) else {
             return nil
         }
-        return components.queryItems?.first(where: { $0.name == "code" })?.value
+        return components.queryItems?.first(where: { $0.name == "state" })?.value
     }
 }
