@@ -11,7 +11,7 @@ import APIClient
 
 enum AuthAssembly {
 
-    static func makeModule() -> AnyView {
+    static func makeModule(authStateService: AuthStateService) -> AnyView {
 
         let requestBuilder = URLRequestBuilder(authorizationProvider: AlwaysNoAuthorizationProvider())
         let uploadBuilder = UploadRequestBuilder(authorizationProvider: AlwaysNoAuthorizationProvider())
@@ -26,7 +26,8 @@ enum AuthAssembly {
         let credentialsStore = CredentialsStore(keychain: Keyсhain())
 
         let viewModel = AuthViewModel(authService: authService,
-                                      credentialsStore: credentialsStore)
+                                      credentialsStore: credentialsStore,
+                                      authStateService: authStateService)
         return AnyView(AuthView(viewModel: viewModel))
     }
 }

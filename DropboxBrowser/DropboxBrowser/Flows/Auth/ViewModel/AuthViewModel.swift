@@ -11,10 +11,12 @@ final class AuthViewModel: NSObject {
 
     private let authService: AuthServiceProtocol
     private let credentialsStore: CredentialsStoreProtocol
+    private let authStateService: AuthStateService
 
-    init(authService: AuthServiceProtocol, credentialsStore: CredentialsStoreProtocol) {
+    init(authService: AuthServiceProtocol, credentialsStore: CredentialsStoreProtocol, authStateService: AuthStateService) {
         self.authService = authService
         self.credentialsStore = credentialsStore
+        self.authStateService = authStateService
     }
 
     func authenticate() async {
@@ -24,6 +26,7 @@ final class AuthViewModel: NSObject {
                                                              state: authResult.state)
 
             credentialsStore.save(credentials)
+            authStateService.state = .authenticated
         } catch {
 
         }

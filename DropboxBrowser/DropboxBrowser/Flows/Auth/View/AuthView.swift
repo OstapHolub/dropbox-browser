@@ -23,6 +23,6 @@ struct AuthView: View {
 struct AuthView_Previews: PreviewProvider {
 
     static var previews: some View {
-        AuthAssembly.makeModule()
+        AuthAssembly.makeModule(authStateService: AuthStateService(credentialsStore: CredentialsStore(keychain: Keyсhain())))
     }
 }

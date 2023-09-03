@@ -29,6 +29,8 @@
 		11D31D972AA4A829003C17F7 /* KeychainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D952AA4A829003C17F7 /* KeychainProtocol.swift */; };
 		11D31D9A2AA4A882003C17F7 /* CredetialsStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D992AA4A882003C17F7 /* CredetialsStoreProtocol.swift */; };
 		11D31D9C2AA4A88C003C17F7 /* CredentialsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D9B2AA4A88C003C17F7 /* CredentialsStore.swift */; };
+		11D31D9F2AA4B054003C17F7 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31D9E2AA4B054003C17F7 /* AuthState.swift */; };
+		11D31DA12AA4B0E5003C17F7 /* AuthStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D31DA02AA4B0E5003C17F7 /* AuthStateService.swift */; };
 		11F150902AA37EFC00E6E5CA /* DropboxBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F1508F2AA37EFC00E6E5CA /* DropboxBrowserApp.swift */; };
 		11F150922AA37EFC00E6E5CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F150912AA37EFC00E6E5CA /* ContentView.swift */; };
 		11F150942AA37EFD00E6E5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F150932AA37EFD00E6E5CA /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		11D31D952AA4A829003C17F7 /* KeychainProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainProtocol.swift; sourceTree = "<group>"; };
 		11D31D992AA4A882003C17F7 /* CredetialsStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredetialsStoreProtocol.swift; sourceTree = "<group>"; };
 		11D31D9B2AA4A88C003C17F7 /* CredentialsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsStore.swift; sourceTree = "<group>"; };
+		11D31D9E2AA4B054003C17F7 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		11D31DA02AA4B0E5003C17F7 /* AuthStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateService.swift; sourceTree = "<group>"; };
 		11F1508C2AA37EFC00E6E5CA /* DropboxBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F1508F2AA37EFC00E6E5CA /* DropboxBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxBrowserApp.swift; sourceTree = "<group>"; };
 		11F150912AA37EFC00E6E5CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 			path = Credentials;
 			sourceTree = "<group>";
 		};
+		11D31D9D2AA4B04B003C17F7 /* AuthState */ = {
+			isa = PBXGroup;
+			children = (
+				11D31D9E2AA4B054003C17F7 /* AuthState.swift */,
+				11D31DA02AA4B0E5003C17F7 /* AuthStateService.swift */,
+			);
+			path = AuthState;
+			sourceTree = "<group>";
+		};
 		11F150832AA37EFC00E6E5CA = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +323,7 @@
 		11F150BA2AA37F3D00E6E5CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				11D31D9D2AA4B04B003C17F7 /* AuthState */,
 				11D31D982AA4A874003C17F7 /* Credentials */,
 				11D31D932AA4A813003C17F7 /* Keychain */,
 				11D31D882AA3D4CE003C17F7 /* Requests */,
@@ -555,6 +569,8 @@
 				11D31D732AA3BB8B003C17F7 /* AuthViewModel.swift in Sources */,
 				11D31D6F2AA3A17F003C17F7 /* AuthAssembly.swift in Sources */,
 				11D31D8C2AA48ED5003C17F7 /* URL+State.swift in Sources */,
+				11D31DA12AA4B0E5003C17F7 /* AuthStateService.swift in Sources */,
+				11D31D9F2AA4B054003C17F7 /* AuthState.swift in Sources */,
 				11D31D922AA49D56003C17F7 /* RefreshTokenRequest.swift in Sources */,
 				11D31D902AA497A4003C17F7 /* Credentials.swift in Sources */,
 				11D31D872AA3D345003C17F7 /* URL+Code.swift in Sources */,
