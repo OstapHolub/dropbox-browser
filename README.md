@@ -17,9 +17,18 @@ In order to compile project install:
 Root folder for xcconfig files for release and debug configurations of the app. Each developer should have thier own config files called `config.debub` and `config.release` for Debub and Release configurations respectively. Structure is the same for both and looks like this:
 
 ```
-CLIENT_ID = REPLACE WITH YOUR CLIENT ID
-BASE_API_URL = REPLACE WITH YOUR BASE API URL
-BASE_AUTH_URL = REPLAVE WITH YOUR BASE AUTH URL
+//General
+CLIENT_ID = 
+BASE_API_URL = 
+
+//Authentication
+
+AUTH_BASE_URL = 
+AUTH_REDIRECT_URI_SCHEME = 
+AUTH_REDIRECT_URI = 
+AUTH_RESPONSE_TYPE = 
+AUTH_CODE_CHALLENGE_METHOD = 
+AUTH_TOKEN_ACCESS_TYPE = 
 ```
 
 ### Flows
@@ -36,6 +45,9 @@ Shared space for small type extensions providing convenient operations for commo
  
 ### Views
 Space for shared across multiple flows views. It's okay to move something from flow to this space whenever you need to use it for something else. Make sure that does not break anything before making such change.
+
+### Model
+Space for shared plain structs and classes describing models used for retrieving, saving and processing data. 
 
 ### SupportingFiles
 Auxiliary group to keep root directory clean. Contains info.plist.
