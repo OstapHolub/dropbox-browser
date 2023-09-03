@@ -19,7 +19,7 @@ struct TokenExchangeRequest: APIRequest {
     let codeVerifier: String
 
     var resourceName: String {
-        "token"
+        "oauth2/token"
     }
 
     var method: HTTPMethod {
