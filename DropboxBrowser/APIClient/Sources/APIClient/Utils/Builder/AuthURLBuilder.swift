@@ -22,8 +22,7 @@ public struct AuthURLBuilder {
             throw URLBuilderError.emptyParams
         }
 
-        guard var components = URLComponents(url: url.appendingPathComponent("authorize"),
-                                             resolvingAgainstBaseURL: false) else {
+        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             throw URLBuilderError.invalidBaseURL
         }
 

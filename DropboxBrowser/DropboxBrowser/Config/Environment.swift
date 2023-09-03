@@ -76,6 +76,13 @@ enum Environment {
         }
         return value
     }()
+
+    static let tokenAccessType: String = {
+        guard let value = Environment.infoDictionary[Key.tokenAccessType] as? String else {
+            fatalError("\(Key.tokenAccessType) key not set in plist for this environment")
+        }
+        return value
+    }()
 }
 
 // MARK: - Private methods
@@ -99,5 +106,6 @@ private extension Environment {
         static let codeChallengeMethod = "AUTH_CODE_CHALLENGE_METHOD"
         static let baseAuthURL = "AUTH_BASE_URL"
         static let clientId = "CLIENT_ID"
+        static let tokenAccessType = "AUTH_TOKEN_ACCESS_TYPE"
     }
 }

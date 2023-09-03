@@ -20,6 +20,7 @@ public enum AuthQueryItem: QueryItem {
         case .clientId: return "client_id"
         case .codeChallenge: return "code_challenge"
         case .codeChallengeMethod: return "code_challenge_method"
+        case .tokenAccessType: return "token_access_type"
         }
     }
 
@@ -32,6 +33,7 @@ public enum AuthQueryItem: QueryItem {
         case let .clientId(id): return id
         case let .codeChallenge(challenge): return challenge
         case let .codeChallengeMethod(method): return method
+        case let .tokenAccessType(type): return type
         }
     }
 
@@ -42,4 +44,5 @@ public enum AuthQueryItem: QueryItem {
     case clientId(String)
     case codeChallenge(String)
     case codeChallengeMethod(String)
+    case tokenAccessType(String)
 }

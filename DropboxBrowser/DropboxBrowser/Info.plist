@@ -4,6 +4,8 @@
 <dict>
 	<key>BASE_API_URL</key>
 	<string>${BASE_API_URL}</string>
+	<key>AUTH_TOKEN_ACCESS_TYPE</key>
+	<string>${AUTH_TOKEN_ACCESS_TYPE}</string>
 	<key>AUTH_BASE_URL</key>
 	<string>${AUTH_BASE_URL}</string>
 	<key>AUTH_REDIRECT_URI_SCHEME</key>

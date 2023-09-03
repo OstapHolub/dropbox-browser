@@ -37,7 +37,8 @@ final class AuthService: NSObject, AuthServiceProtocol {
             .scopes(["account_info.read"]),
             .state(state),
             .codeChallenge(codeChallenge),
-            .codeChallengeMethod(Environment.codeChallengeMethod)
+            .codeChallengeMethod(Environment.codeChallengeMethod),
+            .tokenAccessType(Environment.tokenAccessType)
         ])
 
         let session = ASWebAuthenticationSession(url: url, callbackURLScheme: Environment.redirectURIScheme, completionHandler: { [weak self] url, error in

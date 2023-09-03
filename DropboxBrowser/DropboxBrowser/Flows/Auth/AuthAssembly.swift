@@ -18,7 +18,7 @@ enum AuthAssembly {
 
         let apiClient = URLSessionClient(requestBuilder: requestBuilder,
                                          uploadBuilder: uploadBuilder,
-                                         baseURL: Environment.baseAuthURL)
+                                         baseURL: Environment.baseAPIURL)
 
         let urlBuilder = AuthURLBuilder(url: Environment.baseAuthURL)
         let authService = AuthService(apiClient: apiClient, urlBuilder: urlBuilder)
