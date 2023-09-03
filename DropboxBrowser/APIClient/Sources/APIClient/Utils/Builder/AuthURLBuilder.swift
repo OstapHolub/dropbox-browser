@@ -8,15 +8,21 @@
 
 import Foundation
 
-public enum AuthURLBuilder {
+public struct AuthURLBuilder {
 
-    public static func build(with query: [QueryItem]) throws -> URL {
+    let url: URL
+
+    public init(url: URL) {
+        self.url = url
+    }
+
+    public func build(with query: [AuthQueryItem]) throws -> URL {
 
         guard !query.isEmpty else {
             throw URLBuilderError.emptyParams
         }
 
-        guard var components = URLComponents(url: Environment.authURL, resolvingAgainstBaseURL: false) else {
+        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             throw URLBuilderError.invalidBaseURL
         }
 

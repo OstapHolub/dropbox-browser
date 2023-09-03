@@ -4,8 +4,18 @@
 <dict>
 	<key>BASE_API_URL</key>
 	<string>${BASE_API_URL}</string>
-	<key>BASE_AUTH_URL</key>
-	<string>${BASE_AUTH_URL}</string>
+	<key>AUTH_TOKEN_ACCESS_TYPE</key>
+	<string>${AUTH_TOKEN_ACCESS_TYPE}</string>
+	<key>AUTH_BASE_URL</key>
+	<string>${AUTH_BASE_URL}</string>
+	<key>AUTH_REDIRECT_URI_SCHEME</key>
+	<string>${AUTH_REDIRECT_URI_SCHEME}</string>
+	<key>AUTH_REDIRECT_URI</key>
+	<string>${AUTH_REDIRECT_URI}</string>
+	<key>AUTH_RESPONSE_TYPE</key>
+	<string>${AUTH_RESPONSE_TYPE}</string>
+	<key>AUTH_CODE_CHALLENGE_METHOD</key>
+	<string>${AUTH_CODE_CHALLENGE_METHOD}</string>
 	<key>CLIENT_ID</key>
 	<string>${CLIENT_ID}</string>
 </dict>
